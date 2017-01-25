@@ -1,0 +1,44 @@
+.chat-panel > .panel-body
+{
+    padding: 0px;
+}
+
+.chat-area{
+    height: 400px;
+    overflow: scroll;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.panel-body > .input-group{
+    background: #ececec;
+    padding: 5px;
+}
+
+.simplebox:focus {
+  outline: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+.chat-msg{
+    background: #2495f7;
+    width: 350px;
+    color: white;
+    padding: 10px;
+    font-weight: 300;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin: 3px;
+}
+
+.msg-user{
+    background: #888;
+    float: right;
+}

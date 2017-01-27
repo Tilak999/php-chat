@@ -15,7 +15,7 @@
     padding: 5px;
 }
 
-.simplebox:focus {
+input[type='text']:focus {
   outline: none;
   border: 1px solid #ccc;
   -webkit-box-shadow: none !important;
@@ -29,7 +29,8 @@
 
 .chat-msg{
     background: #2495f7;
-    width: 350px;
+    min-width: 80px;
+    display: inline-block;
     color: white;
     padding: 10px;
     font-weight: 300;
@@ -41,4 +42,11 @@
 .msg-user{
     background: #888;
     float: right;
+    clear: both;
+}
+
+.user-infobox{
+    width: 300px;
+    margin: auto;
+    margin-top:30px; 
 }

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="css/style.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/jquery.cookie.js"></script>
     </head>
 
     <body>
@@ -15,13 +16,31 @@
 
             <div class="panel-body">
                 <div class="chat-area">
-                    <div class="chat-msg">hello, how can i help ?</div>
-
+                    
+                    <div class="user-infobox">
+                        <center>
+                        <p>Please provide your Name and E-mail to have a Chat.</p>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon">Name</span>
+                            <input id="user" type="text" class="form-control" placeholder="Username">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon">E-mail</span>
+                            <input id="email" type="text" class="form-control" placeholder="E-mail">
+                        </div>
+                        <br>
+                        <button id="infoSubmit"class="btn btn-primary">Submit</button>
+                        </center>
+                    </div>
+                    
                 </div>
+
                 <div class="input-group">
-                    <input id="msginput" type="text" class="form-control simplebox" placeholder="Type here...">
+                    <input disabled id="msginput" type="text" class="form-control simplebox" placeholder="Type here...">
                     <span class="input-group-btn">
-                        <button id="sendBtn" class="btn btn-default" type="button">send</button>
+                        <button disabled id="sendBtn" class="btn btn-default" type="button">send</button>
                     </span>
                 </div>
             </div>

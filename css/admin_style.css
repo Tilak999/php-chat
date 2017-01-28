@@ -3,16 +3,25 @@
     padding: 0px;
 }
 
+.chat-panel
+{
+    margin-bottom:0px;
+    height: 100%; 
+}
+
 .chat-area{
-    height: 400px;
+    height: 90%;
     overflow: scroll;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
+    max-height: 100%;
 }
 
 .panel-body > .input-group{
     background: #ececec;
     padding: 5px;
+    position: absolute;
+    bottom: 0px;
 }
 
 input[type='text']:focus {
@@ -28,10 +37,6 @@ input[type='text']:focus {
 }
 
 .chat-msg{
-    clear: both;
-}
-
-.chat-msg > div{
     background: #2495f7;
     min-width: 80px;
     display: inline-block;
@@ -41,16 +46,21 @@ input[type='text']:focus {
     border-radius: 10px;
     letter-spacing: 1px;
     margin: 3px;
-    clear: both;
 }
 
 .msg-user{
-    background: #888 !important;
+    background: #888;
     float: right;
+    clear: both;
 }
 
 .user-infobox{
     width: 300px;
     margin: auto;
     margin-top:30px; 
+}
+
+.row > div
+{
+    padding: 0px;
 }

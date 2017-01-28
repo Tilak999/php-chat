@@ -10,23 +10,32 @@
 
     if(isset($_POST['id']))
     {
+        $last_msgid = 0;
+
+        if(isset($_POST['last'])){
+            $last_msgid = $_POST['last'];
+        }
+
         $id = mysqli_real_escape_string($conn,$_POST['id']);
     
-        $sql = "SELECT * FROM user_messages WHERE user_id=$id OR receiver_id=$id ORDER BY time DESC";
+        $sql = "SELECT * FROM user_messages WHERE (user_id=$id OR receiver_id=$id) AND id>$last_msgid";
         $result = $conn->query($sql);
+        
 
         if($result->num_rows > 0)
         {
             echo '{ "count":"'.$result->num_rows.'","array":[';
             while($row = $result->fetch_assoc())
             {
+                $last_msgid = $row['id'];
+
                 if($row['user_id']==$id) $from = "user";
                 else $from = "admin";
                 
                 $msg = $row['message'];
                 echo '{"from":"'.$from.'","msg":"'.$msg.'"},';
             }
-            echo '{"from":"end","msg":"end"}]}';
+            echo '{"from":"end","msg":"end"}],"last_msgid":"'.$last_msgid.'"}';
         }
     }
     else
